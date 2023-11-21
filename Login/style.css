@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Estilo para todos los selectores*/
+    *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+/* Estilo y posicionamiento de la capa base*/
+body {
+    height: 100%;
+    min-height: 180vh;
+    width: 100%;
+    background-image:url(imgs/san-isidro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80%;
+    display: flex;
+    justify-content: center;
+    animation: fanimado 25s infinite;
+    align-items: center;
+}
+
+@keyframes fanimado {
+    0%{
+        background-position: 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 40% 50%;
+    }
+}
+
+.form-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Estilo de la capa principal*/
+.form-box {
+    z-index: 10;
+    background: #00000088;
+    box-shadow: 0 26px 25px rgba(0, 0, 0, 0.815);
+    width: 400px;
+    padding: 60px 50px;
+    overflow: hidden;
+    border-radius: 10px 0 5px 5px;
+}
+.leña{
+    color: rgb(255, 94, 0) !important;
+    font-weight: bold;
+}
+
+.sign-in-imgBox {
+    border-radius: 0 5px 5px 0;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.form-box .field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 25px;
+}
+
+.form-box .field.active {
+    border-bottom: 2px solid #7e7e7eee;
+    transition: 0.3s ease;
+}
+
+.form-box .field input {
+    border: none;
+    outline: none;
+    color: white;
+    background: none;
+    width: 100%;
+    font-size: 1em;
+    padding-bottom: 5px;
+}
+
+.form-box .field i{
+    color: #828da0;
+    font-size: 1.3rem;
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
+
+.form-box .field.active i {
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+::placeholder {
+    color: white;
+    font-size: 0.85em;
+}
+
+.eye-btn {
+    cursor: pointer;
+}
+
+.eye-btn i:hover {
+    color: white;
+    transition: 0.3s ease;
+}
+
+.forgot-link {
+    text-align: right;
+    transform: translateY(-10px);
+}
+
+.forgot-link a {
+    color: #ffffff;
+    font-size: 0.8em;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.submit-btn {
+    background: #f0f0f0;
+    color: #030303;
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.submit-btn20 {
+    background: #d1d1d1;
+    color: black;
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.imgBox img{
+    max-width: 250px;
+}
+
+.sliding-link {
+    display: flex;
+    font-size: 0.8em;
+    margin-bottom: 25px;
+}
+
+.sliding-link span{
+    color: #0065ff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Adaptacion a pantalla movil */
+@media only screen and (max-width: 735px) {
+
+
+    .imgBox img {
+        max-width: 35%;
+        min-width: 20px;
+    }
+
+    .imgBox {
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+        padding: 35px 35px 15px;
+    }
+
+    .sig-up-form {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .form-container {
+        font-size: 0.9rem;
+    }
+
+    .form-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .other-logins a {
+        padding: 9px 25px;
+        margin: 0 3px;
+    }
+
+}
